@@ -5,7 +5,11 @@ import org.cprover.CProver;
 public class SumXCheck {
 
     public static void check(int x) {
-        // TODO (6): assume the precondition, call SumX.sum, assert the postcondition
-        assert false;   // remove this line
+        
+        CProver.assume(0 <= x && x <= 1000);
+
+        int r = SumX.sum(x);
+
+        assert r == x * (x + 1) / 2;
     }
 }
