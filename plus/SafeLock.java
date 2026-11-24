@@ -61,6 +61,5 @@ public final class SafeLock {
         if (state == State.OPEN) {
             state = State.LOCKED;
         }
-        failed = 0;
     }
 }
